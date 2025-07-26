@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasindu pabasara</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    
+
+    <!-- HERO -->
+    <header class="hero">
+        <h1>Hello, I'm <span>Pasindu</span></h1>
+        <p>Full Stack Developer & DevOps Enthusiast</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate developer with skills in full-stack development, DevOps, and cloud infrastructure. I love
+            building impactful projects and participating in tech events.</p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>Worklenz</h3>
+                <p>A project management app built with React, Node.js, PostgreSQL, and Docker.</p>
+            </div>
+            <div class="card">
+                <h3>Pollify</h3>
+                <p>Interactive live polling mobile app built with Flutter and Supabase.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/aws-day.jpg" alt="AWS Day 2025" />
+                <p>AWS Community Day 2025</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/robotics.jpg" alt="Robotics Workshop" />
+                <p>Robotics Workshop - Line Follower Bot</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Pasindu Pabasara. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
