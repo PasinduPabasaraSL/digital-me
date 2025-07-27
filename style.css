@@ -51,22 +51,6 @@ body {
   animation: float 20s ease-in-out infinite;
 }
 
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-
-  33% {
-    transform: translateY(-20px) rotate(1deg);
-  }
-
-  66% {
-    transform: translateY(10px) rotate(-1deg);
-  }
-}
-
 /* Navigation */
 .navbar {
   position: fixed;
@@ -127,16 +111,38 @@ body {
   font-weight: 700;
 }
 
-@media (max-width: 600px) {
-  .navbar {
-    width: 90%;
-    padding: 10px 20px;
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
   }
 
   .nav-list {
+    display: none;
+    flex-direction: column;
     gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .nav-list.active {
+    display: flex;
   }
 }
 
@@ -489,7 +495,8 @@ body {
 }
 
 .gallery-item {
-  display: block; /* anchor behaves like a block */
+  display: block;
+  /* anchor behaves like a block */
   position: relative;
   border-radius: 20px;
   overflow: hidden;
