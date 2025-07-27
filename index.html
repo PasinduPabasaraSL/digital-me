@@ -2,39 +2,197 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasindu Pabasara</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="https://medium.com/@pabasarapasindu365" target="_blank">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- HERO -->
-    <header class="hero">
-        <h1>Hello, I'm <span>Pasindu</span></h1>
-        <p>Full Stack Developer & DevOps Enthusiast</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hello, I'm <span class="name">Pasindu</span></h1>
+                <p class="subtitle">Intern Software Engineer & DevOps Enthusiast</p>
+                <a href="#experience" class="cta-button">
+                    View My Experience
+                    <span>→</span>
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img src="assets/1.jpg" alt="Pasindu Pabasara"
+                    style="width: 100%; max-width: 350px; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);" />
+            </div>
+
+        </div>
+    </section>
 
     <!-- ABOUT -->
     <section class="about" id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate developer with skills in full-stack development, DevOps, and cloud infrastructure. I love
-            building impactful projects and participating in tech events.</p>
+        <div class="about-grid">
+            <div>
+                <img src="assets/about_photo.jpg" alt="Pasindu Pabasara"
+                    style="width: 100%; max-width: 300px; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);" />
+            </div>
+
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p class="about-text">
+                    I'm a passionate and versatile software engineer with a strong foundation in full-stack development,
+                    DevOps, and cloud infrastructure. With a deep curiosity for how things work and a drive to
+                    constantly improve, I enjoy building meaningful digital solutions that combine efficiency,
+                    performance, and great user experience. My journey spans across various technologies—from developing
+                    secure Laravel APIs and deploying Dockerized apps on AWS, to crafting modern, responsive UIs with
+                    React and Tailwind CSS. I also thrive in automation, CI/CD workflows, and system design, always
+                    aiming to bridge the gap between development and operations. Beyond coding, I love exploring
+                    emerging tech, participating in tech communities, and working on innovative projects that make a
+                    real impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="experience" id="experience">
+        <h2>Professional Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="experience-role">Senior Full Stack Developer</div>
+                    <div class="experience-company">Tech Solutions Inc.</div>
+                    <div class="experience-period">Jan 2023 - Present</div>
+                    <div class="experience-description">
+                        Leading development of enterprise-level web applications using modern technologies.
+                        Responsible for architecture decisions, code reviews, and mentoring junior developers.
+                        Successfully delivered 5+ major projects improving client efficiency by 40%.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">React</span>
+                        <span class="experience-skill">Node.js</span>
+                        <span class="experience-skill">PostgreSQL</span>
+                        <span class="experience-skill">AWS</span>
+                        <span class="experience-skill">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="experience-role">Full Stack Developer</div>
+                    <div class="experience-company">Digital Innovations Ltd.</div>
+                    <div class="experience-period">Mar 2021 - Dec 2022</div>
+                    <div class="experience-description">
+                        Developed and maintained multiple client projects using React, Node.js, and cloud technologies.
+                        Collaborated with cross-functional teams to deliver high-quality software solutions.
+                        Implemented CI/CD pipelines and improved deployment efficiency by 60%.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">JavaScript</span>
+                        <span class="experience-skill">React</span>
+                        <span class="experience-skill">Express.js</span>
+                        <span class="experience-skill">MongoDB</span>
+                        <span class="experience-skill">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="experience-role">Junior Developer</div>
+                    <div class="experience-company">StartUp Ventures</div>
+                    <div class="experience-period">Jun 2020 - Feb 2021</div>
+                    <div class="experience-description">
+                        Started career as a junior developer working on web applications and mobile apps.
+                        Gained experience in full-stack development and agile methodologies.
+                        Contributed to 3 successful product launches and learned industry best practices.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">HTML/CSS</span>
+                        <span class="experience-skill">JavaScript</span>
+                        <span class="experience-skill">Flutter</span>
+                        <span class="experience-skill">Firebase</span>
+                        <span class="experience-skill">Git</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="experience-role">Software Engineering Intern</div>
+                    <div class="experience-company">TechCorp Solutions</div>
+                    <div class="experience-period">Jan 2020 - May 2020</div>
+                    <div class="experience-description">
+                        Completed internship focused on web development and database management.
+                        Worked on internal tools and gained hands-on experience with modern development practices.
+                        Participated in code reviews and learned professional development workflows.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Python</span>
+                        <span class="experience-skill">Django</span>
+                        <span class="experience-skill">MySQL</span>
+                        <span class="experience-skill">REST APIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- PROJECTS -->
     <section class="projects" id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="card">
-                <h3>Worklenz</h3>
-                <p>A project management app built with React, Node.js, PostgreSQL, and Docker.</p>
-            </div>
-            <div class="card">
-                <h3>Pollify</h3>
-                <p>Interactive live polling mobile app built with Flutter and Supabase.</p>
+        <div class="projects-container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Worklenz</h3>
+                        <p class="project-description">
+                            A comprehensive project management application built with modern technologies.
+                            Features real-time collaboration, task tracking, and team management capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Pollify</h3>
+                        <p class="project-description">
+                            Interactive live polling mobile application that enables real-time audience engagement.
+                            Built with Flutter for cross-platform compatibility and Supabase for backend services.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Real-time</span>
+                            <span class="tech-tag">Mobile</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -42,34 +200,62 @@
     <!-- GALLERY -->
     <section class="gallery" id="gallery">
         <h2>Gallery</h2>
-        <div class="gallery-grid">
+        <div class="gallery-masonry">
             <div class="gallery-item">
-                <img src="images/aws-day.jpg" alt="AWS Day 2025" />
-                <p>AWS Community Day 2025</p>
+                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop"
+                    alt="AWS Community Day 2025" />
+                <div class="gallery-caption">AWS Community Day 2025</div>
             </div>
             <div class="gallery-item">
-                <img src="images/robotics.jpg" alt="Robotics Workshop" />
-                <p>Robotics Workshop - Line Follower Bot</p>
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=400&fit=crop"
+                    alt="Robotics Workshop" />
+                <div class="gallery-caption">Robotics Workshop - Line Follower Bot</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=250&fit=crop"
+                    alt="Tech Conference" />
+                <div class="gallery-caption">Tech Conference 2024</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=350&fit=crop"
+                    alt="Team Collaboration" />
+                <div class="gallery-caption">Team Building & Collaboration</div>
             </div>
         </div>
     </section>
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <div class="contact-container">
+            <h2>Let's Build Something Amazing</h2>
+            <p>Ready to bring your ideas to life? Let's collaborate and create something extraordinary together.</p>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>© 2025 Pasindu Pabasara. All rights reserved.</p>
+        <div class="footer-content">
+            <p>© 2025 Pasindu Pabasara. Crafted with passion.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 
 </html>
