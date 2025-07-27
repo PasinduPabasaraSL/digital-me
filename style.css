@@ -68,35 +68,78 @@ body {
 }
 
 /* Navigation */
-nav {
+.navbar {
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
-  background: rgba(51, 65, 85, 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--border-subtle);
-  border-radius: 50px;
-  padding: 10px 20px;
+  background: rgba(15, 23, 42, 0.7); /* dark blue with opacity */
+  backdrop-filter: blur(15px);
+  border-radius: 40px;
+  padding: 12px 30px;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  transition: background-color 0.3s ease;
 }
 
-nav ul {
+.nav-list {
   display: flex;
-  gap: 20px;
+  gap: 35px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
-nav a {
+.nav-list a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 15px;
   position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+  letter-spacing: 0.03em;
 }
 
-nav a:hover {
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: var(--accent-primary);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
   color: var(--accent-primary);
+}
+
+.nav-list a:hover::after,
+.nav-list a:focus::after {
+  width: 100%;
+}
+
+.nav-list a.active {
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 90%;
+    padding: 10px 20px;
+  }
+  
+  .nav-list {
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 /* Hero Section */
