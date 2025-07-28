@@ -51,3 +51,10 @@ document.querySelectorAll('section').forEach(section => {
 
 document.querySelector('.hero').style.opacity = '1';
 document.querySelector('.hero').style.transform = 'translateY(0)';
+
+const hamburger = document.querySelector('.hamburger');
+const navList = document.querySelector('.nav-list');
+
+hamburger.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
