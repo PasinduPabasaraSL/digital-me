@@ -285,6 +285,46 @@ body {
   line-height: 1.8;
 }
 
+@media (max-width: 1024px) {
+  .about-grid {
+    gap: 40px;
+  }
+
+  .about h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    margin-top: 20px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  .about img {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
 /* Experience Section */
 .experience {
   padding: 100px 20px;
@@ -387,17 +427,94 @@ body {
   color: #fff;
 }
 
-@media(max-width:768px) {
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+
+  .exp-role {
+    font-size: 1.2rem;
+  }
+
+  .exp-description {
+    font-size: 0.9rem;
+  }
+
+  .exp-dot {
+    left: -35px;
+  }
+}
+
+@media (max-width: 768px) {
   .experience {
     padding: 80px 20px;
   }
 
   .experience-timeline {
-    padding-left: 20px;
+    padding-left: 15px;
+  }
+
+  .experience-card {
+    padding: 18px;
+  }
+
+  .exp-role {
+    font-size: 1.1rem;
+  }
+
+  .exp-company {
+    font-size: 0.95rem;
+  }
+
+  .exp-description {
+    font-size: 0.9rem;
   }
 
   .exp-dot {
     left: -30px;
+    top: 28px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .exp-skills span {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+  }
+
+  .experience-timeline {
+    padding-left: 10px;
+  }
+
+  .exp-dot {
+    left: -25px;
+  }
+
+  .exp-role {
+    font-size: 1rem;
+  }
+
+  .exp-company {
+    font-size: 0.9rem;
+  }
+
+  .exp-description {
+    font-size: 0.85rem;
+  }
+
+  .exp-skills span {
+    font-size: 11px;
   }
 }
 
@@ -425,7 +542,7 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
@@ -585,25 +702,19 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .gallery {
     padding: 60px 20px;
   }
 
   .gallery h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
   }
 
   .gallery-caption {
     font-size: 0.9rem;
+    padding: 15px;
   }
 }
 
@@ -716,6 +827,56 @@ body {
   box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
 }
 
+@media (max-width: 480px) {
+  .contact {
+    padding: 80px 15px;
+  }
+
+  .contact-container {
+    padding: 25px 20px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-form {
+    gap: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 14px 16px;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    top: 14px;
+    left: 16px;
+  }
+
+  .contact-form input:focus+label,
+  .contact-form input:not(:placeholder-shown)+label,
+  .contact-form textarea:focus+label,
+  .contact-form textarea:not(:placeholder-shown)+label {
+    top: -10px;
+    left: 12px;
+    font-size: 0.7rem;
+    padding: 0 4px;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+    padding: 14px 32px;
+  }
+}
+
 /* Footer */
 footer {
   background: var(--bg-primary);
@@ -754,49 +915,28 @@ footer {
   transform: scale(1.1);
 }
 
-/* Responsive Design */
-/* @media (max-width: 768px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-    padding: 0 20px;
-  }
-
-  .hero-visual {
-    height: 300px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-masonry {
-    columns: 1;
-  }
-
+@media (max-width: 600px) {
   .footer-content {
     flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
   }
 
-  nav {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin: 20px;
-    width: calc(100% - 40px);
+  .social-links a {
+    font-size: 1.4rem;
   }
 
-  nav ul {
-    justify-content: center;
+  .footer-content p {
+    font-size: 0.85rem;
+    padding: 0 10px;
   }
-} */
+}
 
 /* Smooth scrolling */
 html {
