@@ -58,3 +58,27 @@ const navList = document.querySelector('.nav-list');
 hamburger.addEventListener('click', () => {
   navList.classList.toggle('active');
 });
+
+const projectCardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+document.querySelectorAll('.project-card').forEach(card => projectCardObserver.observe(card));
+
+const aboutObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.slide-left, .slide-right').forEach(el => {
+  aboutObserver.observe(el);
+});

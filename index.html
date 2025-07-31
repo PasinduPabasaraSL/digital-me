@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasindu Pabasara</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
@@ -49,11 +52,11 @@
     <section class="about" id="about">
         <div class="about-grid">
             <div>
-                <img src="assets/about_photo.jpg" alt="Pasindu Pabasara"
+                <img src="assets/about_photo.jpg" alt="Pasindu Pabasara" class="about-img slide-left"
                     style="width: 100%; max-width: 300px; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);" />
             </div>
 
-            <div class="about-content">
+            <div class="about-content slide-right">
                 <h2>About Me</h2>
                 <p class="about-text">
                     I'm a passionate and versatile software engineer with a strong foundation in full-stack development,
@@ -66,6 +69,41 @@
                     emerging tech, participating in tech communities, and working on innovative projects that make a
                     real impact.
                 </p>
+
+                <blockquote class="devops-quote">
+                    “Deploy like a pro. Monitor like a detective.”
+                </blockquote>
+
+                <div class="tech-stack">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-icons" style="display: flex; flex-wrap: wrap; gap: 12px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+                            alt="AWS" title="AWS" height="40"
+                            style="background:#f2f3f4; border-radius:4px; padding:2px;" />
+                        <img src="https://cdn.simpleicons.org/springboot/6DB33F" alt="Spring Boot" title="Spring Boot"
+                            height="40" />
+                        <img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel" title="Laravel"
+                            height="40" />
+                        <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" title="Node.js"
+                            height="40" />
+                        <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" title="MySQL" height="40" />
+                        <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" title="Docker" height="40" />
+                        <img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="GitHub Actions"
+                            title="GitHub Actions" height="40" />
+                        <img src="https://cdn.simpleicons.org/apache/E34234" alt="Apache" title="Apache" height="40" />
+                        <img src="https://cdn.simpleicons.org/nginx/009639" alt="Nginx" title="Nginx" height="40" />
+                        <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" title="Git" height="40" />
+                        <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" title="GitHub" height="40" />
+                        <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" title="React" height="40" />
+                        <img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux" title="Linux" height="40" />
+                        <img src="https://cdn.simpleicons.org/go/00ADD8" alt="Go" title="Go" height="40" />
+                        <img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="Next.js" title="Next.js"
+                            height="40" />
+                        <img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS" title="NestJS" height="40" />
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -140,11 +178,13 @@
         </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS SECTION -->
     <section class="projects" id="projects">
         <div class="projects-container">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
+
+                <!-- SeekersConnect -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">SeekersConnect</h3>
@@ -154,19 +194,26 @@
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
-                            <span class="tech-tag">tailwind css</span>
-                            <span class="tech-tag">Spring boot</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Spring Boot</span>
                             <span class="tech-tag">MySQL</span>
                             <span class="tech-tag">Vercel</span>
                         </div>
-                        <a href="https://seekersconnect-frontend.vercel.app/" class="project-link" target="_blank">View
-                            Project →</a>
+                        <a href="https://seekersconnect-frontend.vercel.app/" class="project-link" target="_blank">
+                            View Project <i class="ri-arrow-right-up-line"></i>
+                        </a>
                         <a href="https://github.com/PasinduPabasaraSL/seekersconnect-frontend/" class="project-link"
-                            target="_blank">Frontend code</a>
+                            target="_blank">
+                            Frontend Code <i class="ri-github-line"></i>
+                        </a>
                         <a href="https://github.com/PasinduPabasaraSL/seekersconnect-backend/" class="project-link"
-                            target="_blank">Backend code</a>
+                            target="_blank">
+                            Backend Code <i class="ri-github-line"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- DocBucket -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">DocBucket</h3>
@@ -175,14 +222,17 @@
                             user authentication, and efficient file management.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">javaEE</span>
+                            <span class="tech-tag">JavaEE</span>
                             <span class="tech-tag">Hibernate</span>
                         </div>
                         <a href="https://github.com/PasinduPabasaraSL/docbucket-backend" class="project-link"
-                            target="_blank">GitHub
-                            →</a>
+                            target="_blank">
+                            GitHub <i class="ri-github-line"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- s3-web-project -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">s3-web-project</h3>
@@ -195,11 +245,17 @@
                             <span class="tech-tag">CloudFront</span>
                             <span class="tech-tag">CI/CD</span>
                         </div>
-                        <a href="https://lnkd.in/eCQq-cJS" class="project-link" target="_blank">View Project →</a>
+                        <a href="https://lnkd.in/eCQq-cJS" class="project-link" target="_blank">
+                            View Project <i class="ri-arrow-right-up-line"></i>
+                        </a>
                         <a href="https://github.com/PasinduPabasaraSL/s3-web-project" class="project-link"
-                            target="_blank">GitHub →</a>
+                            target="_blank">
+                            GitHub <i class="ri-github-line"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Serverless IP Logger -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Serverless IP Logger</h3>
@@ -212,12 +268,16 @@
                             <span class="tech-tag">AWS Lambda</span>
                             <span class="tech-tag">API Gateway</span>
                             <span class="tech-tag">CloudWatch Logs</span>
-                            <span class="tech-tag">serverless</span>
+                            <span class="tech-tag">Serverless</span>
                         </div>
                         <a href="https://oa8azu505g.execute-api.ap-southeast-1.amazonaws.com/ip_logger"
-                            class="project-link" target="_blank">View Project →</a>
+                            class="project-link" target="_blank">
+                            View Project <i class="ri-arrow-right-up-line"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Zen Garden -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Zen Garden</h3>
@@ -229,11 +289,19 @@
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">Docker</span>
                         </div>
-                        <a href="https://lnkd.in/eTqZnqX6" class="project-link" target="_blank">GitHub →</a>
-                        <a href="https://lnkd.in/e8dRqhyH" class="project-link" target="_blank">Frontend Image →</a>
-                        <a href="https://lnkd.in/ecZhFVEW" class="project-link" target="_blank">backend Image →</a>
+                        <a href="https://lnkd.in/eTqZnqX6" class="project-link" target="_blank">
+                            GitHub <i class="ri-github-line"></i>
+                        </a>
+                        <a href="https://lnkd.in/e8dRqhyH" class="project-link" target="_blank">
+                            Frontend Image <i class="ri-image-line"></i>
+                        </a>
+                        <a href="https://lnkd.in/ecZhFVEW" class="project-link" target="_blank">
+                            Backend Image <i class="ri-image-line"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- CoffeeArena -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">CoffeeArena</h3>
@@ -248,11 +316,17 @@
                             <span class="tech-tag">Responsive Design</span>
                             <span class="tech-tag">Vercel</span>
                         </div>
-                        <a href="https://lnkd.in/eSedmZ7B" class="project-link" target="_blank">View Project →</a>
+                        <a href="https://lnkd.in/eSedmZ7B" class="project-link" target="_blank">
+                            View Project <i class="ri-arrow-right-up-line"></i>
+                        </a>
                         <a href="https://github.com/PasinduPabasaraSL/coffee-arena" class="project-link"
-                            target="_blank">GitHub →</a>
+                            target="_blank">
+                            GitHub <i class="ri-github-line"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- PlanetVisits -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">PlanetVisits</h3>
@@ -266,11 +340,17 @@
                             <span class="tech-tag">Responsive Design</span>
                             <span class="tech-tag">Vercel</span>
                         </div>
-                        <a href="https://lnkd.in/emfGwiKQ" class="project-link" target="_blank">View Project →</a>
+                        <a href="https://lnkd.in/emfGwiKQ" class="project-link" target="_blank">
+                            View Project <i class="ri-arrow-right-up-line"></i>
+                        </a>
                         <a href="https://github.com/PasinduPabasaraSL/planetvisits" class="project-link"
-                            target="_blank">GitHub →</a>
+                            target="_blank">
+                            GitHub <i class="ri-github-line"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Facebook Clone -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Facebook Clone UI (Mobile)</h3>
@@ -283,17 +363,20 @@
                             <span class="tech-tag">React Native</span>
                             <span class="tech-tag">Mobile Development</span>
                         </div>
-                        <a href="https://github.com/PasinduPabasaraSL/fb-clone" class="project-link"
-                            target="_blank">GitHub →</a>
+                        <a href="https://github.com/PasinduPabasaraSL/fb-clone" class="project-link" target="_blank">
+                            GitHub <i class="ri-github-line"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Hand Gesture Shape Match -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Hand Gesture Shape Match</h3>
                         <p class="project-description">
                             An interactive computer vision game using MediaPipe and OpenCV where you use hand pinch
-                            gestures to drag and drop shapes into matching buckets.
-                            The game features multiple levels, a timer, scoring system, and progress saving.
+                            gestures to drag and drop shapes into matching buckets. Features multiple levels, a timer,
+                            scoring system, and progress saving.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
@@ -302,9 +385,12 @@
                             <span class="tech-tag">Game Development</span>
                         </div>
                         <a href="https://github.com/PasinduPabasaraSL/hand-gesture-shape-match" class="project-link"
-                            target="_blank">GitHub →</a>
+                            target="_blank">
+                            GitHub <i class="ri-github-line"></i>
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -418,6 +504,8 @@
 
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/a62111ea04.js" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
 
 </body>
 
