@@ -1,0 +1,242 @@
+@import 'tailwindcss';
+
+/*
+ * Self-hosted so there is no render-blocking round trip to Google. Only the
+ * latin subset ships; `swap` means text paints in the fallback immediately.
+ */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/ubuntu-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/ubuntu-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/ubuntu-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/ubuntu-mono-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/ubuntu-mono-700.woff2') format('woff2');
+}
+
+/*
+ * Palette is taken from Canonical's brand guidelines and the Yaru GTK theme
+ * used by Ubuntu 24.04+ (GNOME 46/47). Values are exact, not approximations.
+ */
+@theme {
+  /* Canonical brand */
+  --color-ubuntu-orange: #e95420;
+  --color-ubuntu-orange-light: #f47b56;
+  --color-aubergine: #772953;
+  --color-aubergine-light: #77216f;
+  --color-aubergine-mid: #5e2750;
+  --color-aubergine-dark: #2c001e;
+  --color-warm-grey: #aea79f;
+  --color-cool-grey: #333333;
+
+  /* Yaru dark surfaces */
+  --color-yaru-window: #242424;
+  --color-yaru-headerbar: #303030;
+  --color-yaru-sidebar: #2c2c2c;
+  --color-yaru-card: #333333;
+  --color-yaru-popover: #383838;
+  --color-yaru-border: #1b1b1b;
+  --color-yaru-hover: #3f3f3f;
+
+  /* GNOME Shell chrome */
+  --color-shell-panel: #000000;
+  --color-shell-dock: rgba(0, 0, 0, 0.55);
+
+  /* Terminal — Ubuntu's default profile */
+  --color-terminal-bg: #300a24;
+  --color-terminal-green: #4e9a06;
+  --color-terminal-blue: #3465a4;
+  --color-terminal-red: #cc0000;
+  --color-terminal-yellow: #c4a000;
+  --color-terminal-cyan: #06989a;
+
+  --font-ubuntu: 'Ubuntu', 'Ubuntu Sans', system-ui, sans-serif;
+  --font-mono: 'Ubuntu Mono', 'Ubuntu Sans Mono', ui-monospace, monospace;
+
+  /* GNOME uses 12px rounding on windows, 8px on menus */
+  --radius-window: 12px;
+  --radius-menu: 8px;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    font-family: var(--font-ubuntu);
+    color: #fff;
+    background: var(--color-aubergine-dark);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Yaru scrollbars: thin, overlay, no arrows */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.38);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ubuntu-orange);
+    outline-offset: 1px;
+  }
+
+  button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  /* Content that exists for crawlers and screen readers but never paints. */
+  .sr-only-seo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .window-shadow {
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.6),
+      0 8px 32px rgba(0, 0, 0, 0.44),
+      0 20px 60px rgba(0, 0, 0, 0.36);
+  }
+
+  .window-shadow-inactive {
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.5),
+      0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .no-select {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /*
+   * Yaru's slider: a thin track filled to `--filled` with the live accent, and
+   * a plain round handle. Both vendor thumbs need styling separately because
+   * a shared selector list is dropped whole by browsers that don't know one.
+   */
+  .shell-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 16px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .shell-slider::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(
+      to right,
+      var(--color-ubuntu-orange) var(--filled, 0%),
+      rgba(255, 255, 255, 0.2) var(--filled, 0%)
+    );
+  }
+
+  .shell-slider::-moz-range-track {
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(
+      to right,
+      var(--color-ubuntu-orange) var(--filled, 0%),
+      rgba(255, 255, 255, 0.2) var(--filled, 0%)
+    );
+  }
+
+  .shell-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    margin-top: -5px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .shell-slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
